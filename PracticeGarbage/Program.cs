@@ -10,10 +10,12 @@ namespace PracticeGarbage
     {
         static void Main(string[] args)
         {
-            AgeFinder();
+            int age;
+            age  = AgeFinder();
+            ContinuePrompt();
         }
 
-        static void AgeFinder()
+        static int AgeFinder()
         {
             int age;
             bool validresponse;
@@ -37,6 +39,12 @@ namespace PracticeGarbage
 
             } while (!validresponse);
 
+            return age;
+
+        }
+
+        static void ContinuePrompt()
+        {
             Console.WriteLine();
             Console.WriteLine("Press any key to continue");
             Console.ReadKey();
